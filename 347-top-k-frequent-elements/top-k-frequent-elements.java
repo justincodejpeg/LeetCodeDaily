@@ -22,7 +22,8 @@ class Solution {
         for (int i = bucket.length - 1; i >= 0 && counter < k; i--) {
             if (bucket[i] != null){
                 for ( int curr : bucket[i]){
-                    result[counter++] = curr;
+                    result[counter] = curr;
+                    counter++;
                 }
             }
         }
