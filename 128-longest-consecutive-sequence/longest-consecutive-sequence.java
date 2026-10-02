@@ -13,11 +13,11 @@ class Solution {
 
         for (int num : numSet) {
             // Check if 'num' is the start of a sequence
+
             if (!numSet.contains(num - 1)) {
                 int currentNum = num;
                 int currentStreak = 1;
                 
-                // Count how long the streak is
                 while (numSet.contains(currentNum + 1)) {
                     currentNum++;
                     currentStreak++;
