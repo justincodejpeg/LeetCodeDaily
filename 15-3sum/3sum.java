@@ -1,5 +1,6 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
+        
         Arrays.sort(nums);
         List<List<Integer>> result = new LinkedList();
 
@@ -10,6 +11,7 @@ class Solution {
                 int leftPointer = i+1;
                 int rightPointer = nums.length-1;
 
+                //multiple while loops to check the lists inside the list
                 while(leftPointer< rightPointer){
                     if (nums[leftPointer] + nums[rightPointer] == target){
                         result.add(Arrays.asList(nums[i], nums[leftPointer], nums[rightPointer]));
